@@ -1,0 +1,20 @@
+Aula 002:
+
+(System.in)= Monitora a entrada padrão, que é o teclado.
+(System.out)=Imprime na forma padrão.
+System=Pacote básico do sistema.
+Scanner=
+nextLine();=método retorna a próxima linha processada, até o usuário teclar enter, esse método sempre retorna uma String.
+.close();=Ele fecha o Scanner, pois ele estava monitorando o teclado e precisa ser finalizado.
+Integer=Classe
+parseInt(“Argumento do tipo String”)=Método da classe integer.
+
+Primitivo—Objeto:
+byte--Byte
+short—Short
+char—Character esse não tem ParseInt.
+int—Integer
+long—Long
+float—Float
+double—Double
+boolean—Boolean
