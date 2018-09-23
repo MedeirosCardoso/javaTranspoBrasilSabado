@@ -14,25 +14,30 @@ public class Exercicio15 {
 		System.out.println("Digite o valor do seu salário:");
 		float salarioInicial=Float.parseFloat(teclado.nextLine());
 		teclado.close();
-		float inss=0.11f;
-		float salarioInss=salarioInicial*inss;
-		float ir;
-		float valorIr;
-		float salarioLiquido;
-		if(salarioInss>1800 && salarioInss<=2400){
+		float valorDescInss=salarioInicial*((float)11/100);
+		float salarioDescInss=salarioInicial-valorDescInss;
+		float ir = 0;
+		float valorIr = 0;
+		float salarioLiquido = 0;
+		if(salarioDescInss>1800 && salarioDescInss<=2400){
 			ir=7.5f;
-			valorIr=salarioInss*(ir/100);
-			salarioLiquido=salarioInss-valorIr;
-		}else if(((salarioInicial-inss)>2400) && ((salarioInicial-inss)<=3600)){
+			valorIr=salarioDescInss*(ir/100);
+			salarioLiquido=salarioDescInss-valorIr;
+		}else if(((salarioInicial-valorDescInss)>2400) && ((salarioInicial-valorDescInss)<=3600)){
 			ir=24;
-			valorIr=(float)((salarioInicial-inss)*ir/100);
-			salarioLiquido=salarioInicial-inss-valorIr;
-		}else{
+			valorIr=(float)((salarioInicial-valorDescInss)*ir/100);
+			salarioLiquido=salarioInicial-valorDescInss-valorIr;
+		}else if(salarioDescInss>3600){
 			ir=32;
-			valorIr=(float)((salarioInicial-inss)*ir/100);
-			salarioLiquido=salarioInicial-inss-valorIr;
+			valorIr=(float)((salarioInicial-valorDescInss)*ir/100);
+			salarioLiquido=salarioInicial-valorDescInss-valorIr;
+		}else{
+			ir=0;
+			valorIr=0;
+			salarioLiquido=salarioDescInss;
 		}
-		System.out.printf("%s %.2f \n %s %.2f \n %s %.2f \n %s %.2f \n %s %.2f \n",
-				"Salário Bruto:",salarioInicial,"Desconto INSS:",salarioInss,"Percentual IR:",ir,"Valor do desconto de IR:",valorIr,"Salário Líquido:",salarioLiquido);
+		System.out.printf("%s %s %.2f \n %s %s %.2f \n %s %.0f %s \n %s %s %.2f \n %s %s %.2f \n",
+				"Salário Bruto:","R$",salarioInicial,"Desconto INSS:","R$",valorDescInss,"Percentual IR:",ir,"%",
+				"Valor do desconto de IR:","R$",valorIr,"Salário Líquido:","R$",salarioLiquido);
 	}
 }
