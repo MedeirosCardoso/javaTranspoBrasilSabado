@@ -1,0 +1,50 @@
+Aula 003:
+
+Uso do operador ternário, pode utilizar qualquer condição que retorne um valo boolean:
+Condição logica ? “verdade” : “false”;
+String tipo = idade >= 18 ? “maior” : “menor”;
+
+Uso do SWITCH CASE: suporta valor inteiro, String(a partir do Java 1.7).
+No case só consigo comparar valor exato.
+Switch(variavel){
+case 1:
+codigo.
+break;
+case 2:
+codigo.
+break;
+default:
+codigo.
+break;
+}
+
+Utilisando a classe String: é um objeto imutável.
+.length();//Quafntidade de caracteres:
+.replace(“ “, “”); // Remover caracteres: alterara os espaços em branco por vazio.
+Primeiro parâmetro qual o texto que eu quero trocar, segundo o que vou pôr no lugar.
+.replaceAll(“[ ]”,””);//altera a lista de caracteres por vazio.
+.contains(“ ”); //retorna um boolean, contein a string.
+.startsWith(“ ”);//retorna um boolean, inicia com a string.
+.endsWith(“ ”);//retorna um boolean, termina com a string.
+.indexOf(“ ”);//retorna a posição aonde o texto que eu informei começa.
+.indexOf(“ ”, valor);//apartir de qual posição que ele começa.
+.lastIndexOf(“ ”);//retorna a  última posição do texto que eu informei.
+.toUpperCase();//Retorna um nova string com todos os caracteres em caixa alta.
+.toLowerCase();//Retorna um nova string com todos os caracteres em caixa baixa.
+.substring(valor);//Retorna uma nova string apartir da posição que eu informar
+.substring(valor, valor);//Retorna uma nova string entre os valores que eu informar.
+.charAt(index);//Retorna o caractere do índice que eu informei.
+String user1=”joão”;
+String user2=”joão”;aponta para o mesmo potstring.
+String user3=new String(“joão”);//cria um novo objeto.
+User1==user2;//tem o mesmo endereço do potstrig.
+User1==user3;
+User1.equals(user2);//compara o mesmo valor da variavel.
+User1.equals(user3);
+
+.equalsIgnoreCase(“ “);//compara ignorando se é caixa alta ou baixa.
+.trim();//Retira os espaços do início e do final.
+.split(“ “);//passa um parâmetro com o ponto para ele delimitar.
+
+Laço de repetição
+While(expressão boolean){ }//enquanto a expressão for TRUE executa a instrução dentro do while.

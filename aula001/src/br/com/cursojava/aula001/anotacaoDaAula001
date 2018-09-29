@@ -1,0 +1,45 @@
+Aula001
+
+Felipe da Rosa Oliveira
+99602-9682
+
+Nome de classe inicia com letra maiúscula.
+Projeto inicia com letra minúscula.
+Pacote inicia com letra minúscula, utiliza o domínio inverso da empresa que está desenvolvendo.
+Todo o código criado deve estar dentro de uma classe.
+Pasta BIN fica todos .class (todo código compilado).
+
+Tipos de variáveis
+PRIMITIVOS define com letra minúscula:
+Armazena na memória o valor declarado.
+== usado para comparar tipo primitivo.
+Inteiro: byte 1 byte (-128 a 127)
+Inteiro: short 2 bytes (-32768 a 32767) 
+Inteiro: char ‘a’ 2 bytes (0 a 65535)
+Inteiro: int 4 bytes (-2147483648 a 2147483647) valor padrão para o Java.
+Inteiro: long 8 bytes (9223372036654770000 a 9223372036654770000)
+Real: float 4 bytes (-14024E-37 a 340282347E+308)
+Real: double 8 bytes valores padrão para o Java.
+Lógico: boolean 1 bit ‘true/false’
+
+OBJETOS define com letra maiúscula:
+Armazena na memória o endereço do HEAP.
+.equals( ) usado para comparar objetos.
+Tudo que não é primitivo.
+String
+NEW: cria um espaço de memória chamado HEAP
+
+Método utilizado para verificar o maior número: max( );
+Método utilizado para verificar o menor número: min( );
+Método utilizado para realizar operação de potenciação: pow( );
+Método floor: Retorna o menor valor equivalente ao um inteiro
+
+paços para enviar projetos ao gitHub:
+GIT INIT
+GIT REMOTE ADD ORIGIN eu colo o url do repositorio. = (Vincular repositório local com um repositório remoto)
+GIT PULL ORIGIN MASTER =( buscar do remoto para o local.)
+GIT ADD .  = (faz com que ele armazene-os no seu Stage, estando prontos para serem comitados.)
+GIT COMMIT -M "mensagem"
+GIT CONFIG --LOCAL
+GIT COMMIT -M " "  = (para colocá-los no repositório)
+GIT PUSH ORIGIN MASTER = (para mandar do local para o remoto.)
