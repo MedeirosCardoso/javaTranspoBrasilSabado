@@ -17,20 +17,17 @@ public class Exercicio11 {
 		}
 		teclado.close();
 
-		float maiorNota = 0;
-		float menorNota = 0;
+		float maiorNota = notas[0];
+		float menorNota = notas[0];
 
 		for (int i = 0; i < notas.length; i++) {
 
 			System.out.print(notas[i] + " - ");
 
-			maiorNota = notas[0];
-			menorNota = notas[0];
-
-			if (maiorNota <= notas[i]) {
+			if (notas[i] > maiorNota) {
 				maiorNota = notas[i];
 			}
-			if (menorNota >= notas[i]) {
+			if (notas[i] < menorNota) {
 				menorNota = notas[i];
 			}
 		}
