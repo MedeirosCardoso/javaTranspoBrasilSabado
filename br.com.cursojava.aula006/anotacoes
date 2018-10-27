@@ -1,0 +1,33 @@
+Orientaçao objeto
+
+Padrão JavaBean
+Nome de classe:
+Começar com a primeira letra maiúscula e as demais minúsculas.
+Caso seja um nome composto a primeira letra de cada palavra deve ficar com caixa alta(letra maiúscula).
+Ex: Contato, PessoaFisica, RelatorioPagamento
+
+Nome de métodos e variáveis:
+Devem ser escritos em letra minúscula.
+Caso seja um nome composto a primeira letra a partir da segunda palavra deve ficar com caixa alta (letra maiúscula).
+Ex: nome, idade, dataPagamento, processar(), imprimirRelatorio() 
+
+Encapsulamento:
+private
+pacote
+public
+Classe só aceita dois tipos de visibilidade: public ou visibilidade de pacote, se não for declarado a visibilidade por padrão é aplicado a visibilidade de pacote;
+
+Propriedades (variáveis de instância ou de classe) devem possuir visibilidade privada (private).
+Cada propriedade deve ser exposta através da definição de métodos de configuração e acesso.
+Os métodos de configuração e acesso devem possuir visibilidade publica (public).
+Todo método de configuração deve possuir o prefixo set seguido do nome da propriedade. Os métodos de configuração devem possuir o tipo de retorno void e precisam possuir exatamente um parâmetro na listagem de parâmetros, que deve ser do mesmo tipo da propriedade.
+Todo método de acesso deve possuir o prefixo get seguido do nome da propriedade.
+Opcionalmente os métodos de acesso de propriedade boolean podem utilizar o prefixo is,
+Os métodos de acesso devem possuir como tipo de retorno exatamente o mesmo tipo da propriedade e não devem possuir parâmetros em sua listagem de parâmetros.
+
+Herança:
+Funcionario funcVend = new Vendedor(); //pai vem antes do filho;
+o filho não pode vir antes do pai: Vendedor vend = new Funcionario();
+
+@Override: tem a mesma assinatura do método é sobre escrição, só pode ser feita nos filhos.
+O método que tem assinatura diferente é sobre carga, pode ser feita tanto no pai ou nos filhos.
