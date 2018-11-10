@@ -1,0 +1,14 @@
+ 1- Cadastrar Aluno
+ 2 - Listar Aluno
+ 3 - Remover Aluno
+ 
+ O cadastro de alunos deve possuir os seguintes dados:
+ matricula
+ nome
+ email
+ telefone
+ nomeDoPai
+ nomeDaMae
+ cpf
+ 
+ OBS o método equal deve considerar apenas o campo matricula.
