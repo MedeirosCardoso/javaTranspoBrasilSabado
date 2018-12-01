@@ -1,0 +1,22 @@
+Aula 009
+Converter para projeto MAVEN
+
+Maven Dependencies: usar bibliotecas externas.
+para configurar pom.xml:
+abaixo do </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.postgresql</groupId>
+  		<artifactId>postgresql</artifactId>
+  		<version>9.3-1102-jdbc41</version>
+  	</dependency>
+  </dependencies>
+
+REPOSITORIO ou DAO: Responsável em pegar informações das tabelas para objetos e de objetos para tabelas
+
+WEB
+na requisição a porta padrão é :80
+Metodo GET
+Metodo POST
+QueryString usado no GET
+status 200 foi e voltou com sucesso
