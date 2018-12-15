@@ -8,10 +8,17 @@
 </h:head>
 <h:body>
 
+	<f:metadata>
+		<f:viewParam name="oid" value="#{produtoBean.oid}" />
+	</f:metadata>
+	
 	<h1>Formulário de Produtos</h1>
 	
 	<div>
 		<h:form>
+			<div class="messages.container">
+				<h:messages />
+			</div>
 			<div class="field">
 				<h:outputLabel value="Id" />
 				<h:inputText styleClass="is-fullwidth" value="#{produtoBean.produto.id}" readonly="#{true}" />
@@ -22,12 +29,18 @@
 			</div>
 			<div class="field">
 				<h:outputLabel value="Preço" />
-				<h:inputText styleClass="is-fullwidth" value="#{produtoBean.produto.preco}" />
+				<h:inputText styleClass="is-fullwidth" value="#{produtoBean.produto.preco}" >
+					<f:convertNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" locale="pt_BR" />
+				</h:inputText>
 			</div>
 			<div class="field">
 				<h:commandButton styleClass="btn btn-primary is-fullwidth" action="#{produtoBean.salvar()}" value="Salvar" />
 			</div>
 		</h:form>
+		<br />
+		<h:outputLink value="./lista.xhtml">
+			Lista de Produtos
+		</h:outputLink>
 	</div>
 	
 </h:body>

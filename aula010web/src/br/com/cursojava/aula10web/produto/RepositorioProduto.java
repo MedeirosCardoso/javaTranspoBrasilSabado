@@ -24,7 +24,7 @@ public class RepositorioProduto {
 		return produto;
 	}
 
-	public Produto salvar(Produto produto) {
+	public boolean salvar(Produto produto) {
 		if (produto != null) {
 			if (produto.getId() == null) {
 				return inserir(produto);
@@ -32,39 +32,59 @@ public class RepositorioProduto {
 				return atualizar(produto);
 			}
 		}
-		return produto;
+		return false;
 	}
 
-	private Produto inserir(Produto produto) {
+	private boolean inserir(Produto produto) {
+		boolean result = false;
 		EntityManager em = JPAUtil.createEntityManager();
-		em.getTransaction().begin();
-		em.persist(produto);
-		em.getTransaction().commit();
+		try {
+			em.getTransaction().begin();
+			em.persist(produto);
+			em.getTransaction().commit();
+			result = true;
+		} catch (Exception e) {
+			result = false;
+		}
 		em.close();
-		return produto;
+		return result;
 	}
 
-	private Produto atualizar(Produto produto) {
+	private boolean atualizar(Produto produto) {
+		boolean result = false;
 		EntityManager em = JPAUtil.createEntityManager();
-		em.getTransaction().begin();
-		em.merge(produto);
-		em.getTransaction().commit();
+		try {
+			em.getTransaction().begin();
+			em.merge(produto);
+			em.getTransaction().commit();
+			result = true;
+		} catch (Exception e) {
+			result = false;
+		}
 		em.close();
-		return produto;
+		return result;
 	}
 
-	public void remover(Produto produto) {
+	public boolean remover(Produto produto) {
+		boolean result = false;
 		EntityManager em = JPAUtil.createEntityManager();
-		em.getTransaction().begin();
-		em.remove(em.merge(produto));
-		em.getTransaction().commit();
+		try {
+			em.getTransaction().begin();
+			em.remove(em.merge(produto));
+			em.getTransaction().commit();
+			result = true;
+		} catch (Exception e) {
+			result = false;
+		}
 		em.close();
+		return result;
 	}
-	
-	public List<Produto> buscarPorFaixa(double min, double max){
+
+	public List<Produto> buscarPorFaixa(double min, double max) {
 		List<Produto> lista = null;
 		EntityManager em = JPAUtil.createEntityManager();
-		TypedQuery<Produto> query = em.createQuery("SELECT p FROM Produto p WHERE p.preco > :min OR p.preco < :max ", Produto.class);
+		TypedQuery<Produto> query = em.createQuery("SELECT p FROM Produto p WHERE p.preco > :min OR p.preco < :max ",
+				Produto.class);
 		lista = query.getResultList();
 		em.close();
 		return lista;

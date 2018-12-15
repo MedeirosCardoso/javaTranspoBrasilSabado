@@ -11,6 +11,10 @@
 	<h1>Lista de Produtos</h1>
 	
 	<div>
+		<h:outputLink value="./form.xhtml">
+			<f:param name="oid" value="novo" />
+			Novo
+		</h:outputLink>
 		<h:dataTable value="#{produtoBean.produtos}" var="produto">
 			<h:column>
 				<f:facet name="header">Id</f:facet>
@@ -18,7 +22,10 @@
 			</h:column>
 			<h:column>
 				<f:facet name="header">Nome</f:facet>
-				<h:outputText value="#{produto.nome}" />
+				<h:outputLink value="./form.xhtml">
+					<f:param name="oid" value="#{produto.id}"></f:param>
+					<h:outputText value="#{produto.nome}" />
+				</h:outputLink>
 			</h:column>
 			<h:column>
 				<f:facet name="header">Preço</f:facet>
