@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		xmlns:h ="http://java.sun.com/jsf/html"
+		xmlns:f = "http://java.sun.com/jsf/core">
+<h:head>
+	<link rel="stylesheet" href="#{request.contextPath}/resources/app/css/app.css" />
+</h:head>
+<h:body>
+
+	<h1>Formulário de Produtos</h1>
+	
+	<div>
+		<h:form>
+			<div class="field">
+				<h:outputLabel value="Id" />
+				<h:inputText styleClass="is-fullwidth" value="#{produtoBean.produto.id}" readonly="#{true}" />
+			</div>
+			<div class="field">
+				<h:outputLabel value="Nome" />
+				<h:inputText styleClass="is-fullwidth" value="#{produtoBean.produto.nome}" />
+			</div>
+			<div class="field">
+				<h:outputLabel value="Preço" />
+				<h:inputText styleClass="is-fullwidth" value="#{produtoBean.produto.preco}" />
+			</div>
+			<div class="field">
+				<h:commandButton styleClass="btn btn-primary is-fullwidth" action="#{produtoBean.salvar()}" value="Salvar" />
+			</div>
+		</h:form>
+	</div>
+	
+</h:body>
+</html>

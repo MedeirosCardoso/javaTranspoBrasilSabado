@@ -10,4 +10,8 @@ public class FacadeProduto {
 		return repositorio.buscarTodos();
 	}
 
+	public Produto novoProduto() {
+		return new Produto();
+	}
+
 }

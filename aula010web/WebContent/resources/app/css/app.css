@@ -1,0 +1,29 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box; /*width vai representar o tamanho até a borda, padding e border é descontado o valor deles no tamanho do width que foi informado*/
+}
+
+.field{
+	display: flex;
+	flex-direction: column;
+}
+
+.field input{
+	margin-bottom: 10px;
+}
+
+.is-full-width{
+	width: 100%;
+}
+
+.btn{
+	border: none;
+	background-color: #ccc;
+	color: #000;
+}
+
+.btn-primary{
+	background-color: #336e7b;
+	color: #fff;
+}
